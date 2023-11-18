@@ -36,9 +36,9 @@ public class Ball : MonoBehaviour
     {
         switch (col)
         {
-            case BallColor.White:
+            case BallColor.Black:
                 point = 0;
-                rd.material.color = Color.white;
+                rd.material.color = Color.black;
                 break;
             case BallColor.Red:
                 point = 1;
@@ -64,9 +64,9 @@ public class Ball : MonoBehaviour
                 point = 6;
                 rd.material.color = new Color32(191, 98, 193, 255);
                 break;
-            case BallColor.Black:
-                point = 7;
-                rd.material.color = Color.black;
+            case BallColor.White:
+                point = 0;
+                rd.material.color = Color.white;
                 break;
         }
     }
