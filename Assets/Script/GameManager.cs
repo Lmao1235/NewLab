@@ -41,8 +41,9 @@ public class GameManager : MonoBehaviour
         camera = Camera.main.gameObject;
         CameraBehindCueBall();
 
-        SetBall(BallColor.White, 0);
         SetBall(BallColor.Red, 1);
+        SetBall(BallColor.White, 0);
+        
         SetBall(BallColor.Yellow, 2);
         SetBall(BallColor.Green, 3);
         SetBall(BallColor.Brown, 4);
