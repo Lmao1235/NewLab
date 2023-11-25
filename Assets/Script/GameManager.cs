@@ -55,8 +55,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         RotateBall();
-        if (Input.GetKeyDown(KeyCode.Space)) ShootBall();
-        if (Input.GetKeyDown(KeyCode.Backspace)) StopBall();
+        if (Input.GetKeyDown(KeyCode.W))
+            ShootBall();
+        if (Input.GetKeyDown(KeyCode.S))
+            StopBall();
 
     }
     private void SetBall(BallColor col, int i)
@@ -68,7 +70,7 @@ public class GameManager : MonoBehaviour
     private void RotateBall()
     {
         xInput = Input.GetAxis("Horizontal");
-        cueBall.transform.Rotate(new Vector3(0f, xInput, 0f));
+        cueBall.transform.Rotate(new Vector3(0f, xInput / 5f, 0f));
     }
 
     private void ShootBall()
@@ -79,6 +81,7 @@ public class GameManager : MonoBehaviour
 
         ballLine.SetActive(false);
     }
+
     private void CameraBehindCueBall()
     {
         camera.transform.parent = cueBall.transform;
@@ -97,6 +100,7 @@ public class GameManager : MonoBehaviour
         camera.transform.eulerAngles = new Vector3(30f, 0f, 0f);
         ballLine.SetActive(true);
     }
+
     public void UpdateScoreText()
     {
         scoreText.text = $"Player score :{playerScore}";

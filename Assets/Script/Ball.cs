@@ -54,7 +54,7 @@ public class Ball : MonoBehaviour
                 break;
             case BallColor.Brown:
                 point = 4;
-                rd.material.color = new Color32(106, 64, 34, 255);
+                rd.material.color = new Color32(212, 53, 17, 255);
                 break;
             case BallColor.Blue:
                 point = 5;
@@ -62,13 +62,13 @@ public class Ball : MonoBehaviour
                 break;
             case BallColor.Pink:
                 point = 6;
-                rd.material.color = new Color32(180, 45, 159, 255);
+                rd.material.color = new Color32(191, 98, 193, 255);
                 break;
             case BallColor.Black:
                 point = 7;
                 rd.material.color = Color.black;
                 break;
-         
         }
     }
 }
+
